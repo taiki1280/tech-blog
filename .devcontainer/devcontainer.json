@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "tech-blog",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "yarn install",
+	"postStartCommand": "npx zenn preview",
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph",
+				"Gruntfuggly.todo-tree",
+				"streetsidesoftware.code-spell-checker",
+				"esbenp.prettier-vscode"
+			],
+			"workbench.colorCustomizations": {
+				"titleBar.activeBackground": "#3EA8FF",
+				"titleBar.inactiveBackground": "#3EA8FF",
+				"titleBar.activeForeground": "#000000",
+				"statusBar.background": "#3EA8FF",
+				"statusBar.foreground": "#000000"
+			}
+		}
+		// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+		// "remoteUser": "root"
+	}
